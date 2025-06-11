@@ -11,20 +11,33 @@
     <p>標準体重は（身長-100）*0.9</p>
     <button onClick="bmi();">BMI</button>
     <button onClick="tai();">標準体重</button>
+    <p id="bmi_m">ここにBMIが表示されます</p>
+    <p id="ta_m">ここに標準体重が表示されます。</p>
+    <p id="msg">ここに評価が表示されます。</p>
     <script>
         let alt, we, bm, ta;
         function bmi() {
             let alt = parseInt(prompt('身長を入力してください'));
             let we = parseInt(prompt('体重を入力してください'));
             let bm = we / (alt * alt) * 10000;
-            alert("あなたのBMIは" + bm + "です。")
+            document.getElementById('bmi_m').textContent='あなたのBMIは' + bm + 'です。';
+            if (bm > 30) {
+                document.getElementById('msg').textContent = 'あなたは太りすぎです。';
+            } else if (bm > 25 && bm <= 30) {
+                document.getElementById('msg').textContent = 'あなたは太り気味です。';
+            } else if (bm > 20 && bm <= 25) {
+                document.getElementById('msg').textContent = 'あなたは標準です。';
+            } else if (bm < 20) {
+                document.getElementById('msg').textContent = 'あなたはややせ気味です。';
+            }
         }
 
         function tai() {
             let alt = parseInt(prompt('身長を入力してください'));
             let ta = (alt - 100) * 0.9;
-            alert("標準体重は" + ta + "です。")
+            document.getElementById('ta_m').textContent='標準体重は' + ta + 'です。';
         }
+        
     </script>
 </body>
 </html>

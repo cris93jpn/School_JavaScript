@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>和暦</title>
+</head>
+<body>
+    <p>西暦を和暦に変換できます</p>
+    <button onclick="year()">西暦を入力してください</button>
+    <p>1867年以前は明治以前</p>
+    <p>1868年から1911年は明治</p>
+    <p>1912年から1925年は大正</p>
+    <p>1926年から1988年は昭和</p>
+    <p>1989年から2018までは平成　それ以降は令和</p>
+
+    <script>
+        function year() {
+            let y =parseInt(prompt("西暦何年？", ""));
+            if (y <= 1867) {
+                alert("明治以前です。")
+            } else if (y >= 1868 && y <= 1911) {
+                alert("明治" + (y - 1867) + "年です")
+            } else if (y >= 1912 && y <= 1925) {
+                alert("大正" + (y - 1911) + "年です")
+            } else if (y >= 1926 && y <= 1988) {
+                alert("昭和" + (y - 1925) + "年です")
+            } else if (y >= 1989 && y <= 2018) {
+                alert("平成" + (y - 1988) + "年です")
+            } else if (y >= 2019) {
+                alert("令和" + (y - 2018) + "年です")
+            } 
+        }
+    </script>
+</body>
+</html>

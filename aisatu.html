@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>あいさつ</title>
+</head>
+<body>
+    <p>時間によって挨拶を変える　＆＆と｜｜を使ってみよう</p>
+    <p>現在の時間が4時から10時まで「おはよう」</p>
+    <p>11時から16時まで「こんにちは」</p>
+    <p>17時から23時または０から3時まで「こんばんは」</p>
+    <button onclick="time()">時間によって挨拶が変わります</button>
+
+    <script>
+        function time() {
+            let now = new Date(); 
+            let h = now.getHours(); 
+            if (h >= 4 && h <= 10 ) {
+                alert('現在の時間は' + h + '時です。');
+                alert('おはよう');
+            } else if (h >= 11 && h <= 16 ) {
+                alert('現在の時間は' + h + '時です。');
+                alert('こんにちは');
+            } else if (h >= 17 && h <= 23 || h >= 0 && h <= 3) {
+                alert('現在の時間は' + h + '時です。');
+                alert('こんばんは');
+            }
+        }
+    </script>
+</body>
+</html>

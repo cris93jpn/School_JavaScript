@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IF</title>
+</head>
+<body>
+    <h3>点数を入力してね</h3>
+    if => 60点以上で合格、それ以外不合格
+    <button onclick="kotae0()">成績if</button><br>
+    elseif=>80点以上でA、70点以上でB、60点以上でC、それ以外D 
+    <button onclick="kotae1()">成績elseif</button><br>
+    &&=>80点以上でA、70点以上でB、60点以上でC、60未満D
+    <button onclick="kotae2()">成績elseif</button><br>
+    switch=>80点以上でA、70点以上でB、60点以上でC、それ以外D
+    <button onclick="kotae3()">成績switch</button>
+
+    <script>
+    function kotae0() {
+        let ten =parseInt(prompt("点数を入力してね", ""));
+        if (ten >= 60) {
+            alert("合格");
+        } else {
+            alert("不合格");
+        }
+    }
+
+    function kotae1() {
+        let ten =parseInt(prompt("点数を入力してね", ""));
+        if (ten >= 80) {
+            alert("A");
+        } else if (ten >= 70){
+            alert("B");
+        } else if (ten >= 60){
+            alert("C");
+        } else {
+            alert("D");
+        }
+    }
+
+    function kotae2() {
+        let ten =parseInt(prompt("点数を入力してね", ""));
+        if (ten >= 80 && ten <= 100) {
+            alert("A");
+        }
+        if (ten >= 70 && ten <= 80){
+            alert("B");
+        }
+        if (ten >= 60 && ten <= 69){
+            alert("C");
+        } 
+        if (ten < 60) {
+            alert("D");
+        }
+    }
+
+    function kotae3() {
+        let ten =parseInt(prompt("点数を入力してね", ""));
+        switch (ten) {
+            case 80:
+                alert("A");
+                break;
+            case 70:
+                alert("B");
+                break;
+            case 60:
+                alert("C");
+                break;
+            default:
+                alert("D");
+        }
+    }
+    </script>
+
+</body>
+</html>

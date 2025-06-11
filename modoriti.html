@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>戻り値</title>
+</head>
+<body>
+    <p>３つのボタン</p>
+    <button onclick="let res=nu(1); alert(res + 'ボタンが押された');">ボタン1</button>
+    <button onclick="let res2=nu(2); alert(res2 + 'ボタンが押された');">ボタン2</button>
+    <button onclick="let res3=nu(3); alert(res3 + 'ボタンが押された');">ボタン3</button>
+
+    <script>
+        function nu(num) {
+            if (num == 1 || num == 3) {
+                return '奇数';
+            } else if (num == 2) {
+                return '偶数';
+            }
+        }
+    </script>
+</body>
+</html>

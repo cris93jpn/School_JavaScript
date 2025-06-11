@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カラー</title>
+</head>
+<body id="abc">
+    <h1>文字色の変更</h1>
+    <p>以下のボタンをクリックするとホームページの文字を変更できます。</p>
+    <button onclick="color('red')">赤色</button>
+    <button onclick="color('green')">緑色</button>
+    <button onclick="color('blue')">青色</button>
+    <button onclick="color('orange')">オレンジ</button>
+    <button onclick="color('black')">黒色</button>
+    <button onclick="color('white')">白色</button>
+    <br><hr>
+
+    <h1>背景色の変更</h1>
+    <p>以下のボタンをクリックするとホームページの背景色を変更できます。</p>
+    <button onclick="bgcolor('red')">赤色</button>
+    <button onclick="bgcolor('green')">緑色</button>
+    <button onclick="bgcolor('blue')">青色</button>
+    <button onclick="bgcolor('orange')">オレンジ</button>
+    <button onclick="bgcolor('black')">黒色</button>
+    <button onclick="bgcolor('white')">白色</button>
+    <br><hr>
+
+    <button onclick="document.getElementById('abc').style.color='black'; document.getElementById('abc').style.backgroundColor='white';">初期化</button>
+    <br><hr>
+
+    <button onclick="document.getElementById('abc').style.fontWeight='bold';">太字</button>
+    <button onclick="document.getElementById('abc').style.fontFamily='serif';">フォントを明朝体に</button>
+    <button onclick="document.getElementById('abc').style.textDecoration='underline';">下線を引く</button>
+    <button onclick="document.getElementById('abc').style.border='2px solid #000000';">枠線で囲む</button>
+
+    <script>
+        function color(colors) {
+            document.getElementById('abc').style.color = colors;
+        }
+
+        function bgcolor(bgc2) {
+            document.getElementById('abc').style.backgroundColor = bgc2;
+        }
+    </script>
+</body>
+</html>

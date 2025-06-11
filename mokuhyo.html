@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>目標</title>
+</head>
+<body>
+    <h1>目標</h1>
+    <button onclick="moku()">目標を見る</button>
+    <script>
+        function moku() {
+            let day = parseInt(prompt('日給', ''));
+            let moku = parseInt(prompt('目標', ''));
+            let kei = 0;
+            let tot = 0;
+            while (kei < moku) {
+                kei = kei + day;
+                tot++;
+            }
+            alert('あと' + tot + '日働け！')
+        }
+    </script>
+</body>
+</html>

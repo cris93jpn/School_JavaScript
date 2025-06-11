@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>和暦</title>
+</head>
+<body>
+    <p>西暦を和暦に変換できます</p>
+    <button onclick="year()">西暦を入力してください</button>
+    <p>1867年以前は明治以前</p>
+    <p>1868年から1911年は明治</p>
+    <p>1912年から1925年は大正</p>
+    <p>1926年から1988年は昭和</p>
+    <p>1989年から2018までは平成　それ以降は令和</p>
+
+    <script>
+        function year() {
+            let era =prompt("meiji, taisyo, syowa, heisei, reiwa？", "");
+            let y =parseInt(prompt("西暦何年？", ""));
+            let anser = 0;
+            let msg = '';
+
+            switch (era) {
+                case 'meiji':
+                    anser = y - 1867;
+                    msg = 'meiji' + anser;
+                    break;
+                case 'taisyo':
+                    anser = y - 1911;
+                    msg = 'taisyo' + anser;
+                    break;
+                case 'syowa':
+                    anser = y - 1925;
+                    msg = 'syowa' + anser;
+                    break;
+                case 'heisei':
+                    anser = y - 1988;
+                    msg = 'heisei' + anser;
+                    break;
+                case 'showa':
+                    anser = y - 2018;
+                    msg = 'showa' + anser;
+                    break;
+                default:
+                    msg = '明治前';
+            }
+            alert(y + '年は' + msg + '年です。');
+        }
+
+    </script>
+</body>
+</html>
