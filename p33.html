@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>変数の演算</title>
+</head>
+<body onload="you()">
+    <h3>問題2</h3>
+    <p>日本で一番高い山は？ <button onClick="kotae();">答えを見る</button></p>
+    <script>
+        function you() {
+            let s = 'Hello';
+            s = s + 'Tokyo';
+            alert(s);
+        }
+        function kotae() {
+            var yama = "富士山";
+            alert("答えは" + yama + "です。");
+        }
+    </script>
+</body>
+</html>

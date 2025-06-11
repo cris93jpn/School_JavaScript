@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>フォームスライド</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        div {
+            width: 200px;
+            height: 267px;
+            overflow: hidden;
+        }
+
+        p {
+            width: 800px;
+            height: 267px;
+            margin: 0;
+        }
+
+        .question {
+            width: 200px;
+            margin-right: 50px;
+            border: 2px solid blue;
+        }
+    </style>
+    <script>
+        $(function() {
+            $('.c1').click(function() {
+                $("p:not(:animated)").animate({
+                    marginLeft: "-200px"
+                }, "slow", "swing");
+            });
+            $('.c2').click(function() {
+                $("p:not(:animated)").animate({
+                    marginLeft: "-400px"
+                }, "slow", "swing");
+            });
+        });
+    </script>
+</head>
+<body>
+        <div>
+            <p>
+            <label for="one" class="question">問１
+                <input type="radio" name="one" value="yes" class="c1"> はい
+                <input type="radio" name="one" value="no" class="c1"> いいえ
+            </label>
+            <label for="two" class="question">問2
+                <input type="radio" name="two" value="yes" class="c2"> はい
+                <input type="radio" name="two" value="no" class="c2"> いいえ
+            </label>
+            <label for="three" class="question">問3
+                <input type="radio" name="three" value="yes"> はい
+                <input type="radio" name="three" value="no"> いいえ
+                <input type="submit" value="送配"> 
+            </label>
+        </p>
+        </div>
+</body>
+</html>

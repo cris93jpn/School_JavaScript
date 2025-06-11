@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+</head>
+<body>
+    <p>身長 = 170cm, 体重 = 70kgのBMIと標準体重を計算します</p>
+    <p>BMIは体重/（身長＊身長）＊10000</p>
+    <p>標準体重は（身長-100）*0.9</p>
+    <button onClick="bmi();">BMI</button>
+    <button onClick="tai();">標準体重</button>
+    <div id="b">ここにBMIが表示されます。</div>
+    <div id="h">ここに標準体重が表示されます。</div>
+    <script>
+        let alt = 170
+        let we = 70
+        function bmi() {
+            let bm = we / (alt * alt) * 10000;
+            let anserBox = document.getElementById('b').textContent = 'あなたのBMIは' + bm + "です。";
+        }
+
+        function tai() {
+            let ta = (alt - 100) * 0.9;
+            let ans = document.getElementById('h').textContent = "標準体重は" + ta + "です。";
+        }
+    </script>
+</body>
+</html>
