@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+    <style>
+        table {
+            color: black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    週法5年分の身長と体重の一覧
+    <table border="5px">
+        <tr>
+            <th>年度</th>
+            <th>身長</th>
+            <th>体重</th>
+        </tr>
+        <tr>
+            <th>2014</th>
+            <th>155</th>
+            <th>55</th>
+        </tr>
+        <tr>
+            <th>2015</th>
+            <th>161</th>
+            <th>50</th>
+        </tr>
+        <tr>
+            <th>2016</th>
+            <th>162</th>
+            <th>65</th>
+        </tr>
+        <tr>
+            <th>2017</th>
+            <th>164</th>
+            <th>70</th>
+        </tr>
+        <tr>
+            <th>2018</th>
+            <th>170</th>
+            <th>75</th>
+        </tr>
+    </table>
+
+    <p>BMIを知りたい年度を下のボタンから入力して下さい</p>
+    <button onclick="bmi()">BMI</button>
+    <script>
+        function bmi() {
+            let alt = ["155", "161", "162", "164", "170"]
+            let year = ["2014","2015","2016","2017","2018"]
+            let wei = ["55","50","65","70","75"]
+            let nen = prompt('年度を入力してください','');
+            for (let i = 0; i < year.length; i++) {
+                if (year[i] == nen) {
+                    let weight = wei[i];
+                    let hei = alt[i]; 
+                    let bmi2 = weight / (hei * hei) * 10000;
+                    alert(nen + "のあなたの身長は" + hei + "、体重は" + weight + "で、BMIは" + bmi2 + "です。");
+                }
+            }            
+                
+            
+        }
+    </script>
+</body>
+</html>

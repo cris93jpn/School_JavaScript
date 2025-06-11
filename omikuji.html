@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>おみくじ</title>
+</head>
+<body>
+    <p>大吉、中吉、吉、小吉、末吉、凶、大凶のなかで</p>
+    <button onClick="luck()">あなたの運勢は?</button>
+    <script>
+        function luck() {
+            let luck = ["大吉", "中吉", "吉", "小吉", "末吉", "凶", "大凶"];
+            let ran = Math.random() * luck.length;
+            let r = Math.floor(ran);
+            alert("今日のあなたの運勢は" + luck[r] + "です")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>税込</title>
+</head>
+<body>
+    <p>５つの価格（100,200,300,400,500）の税込価格を表示。</p>
+    <button onClick="zei()">計算結果</button>
+    <script>
+        function zei() {
+            let kakaku = ["100", "200", "300", "400", "500"];
+            let msg = "";
+            let ran = Math.random() * kakaku.length;
+            let r = Math.floor(ran);
+            for (let i = 0; i < kakaku.length; i++) {
+                let kin = kakaku[r];
+                let zeik = Math.round(kin * 1.1);
+                msg = kin + "円は税込で" + zeik + "です";
+            }
+            alert(msg);
+        }
+    </script>
+</body>
+</html>

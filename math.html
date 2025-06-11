@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math</title>
+</head>
+<body>
+    <button onClick="kotae1()">Math</button>
+    <script>
+        function kotae1() {
+            let n = 3.57;
+            alert(n + "を切り捨て＝" + Math.floor(n));
+            alert(n + "を切り上げ＝" + Math.ceil(n));
+            alert(n + "を四捨五人＝" + Math.round(n));
+            let ran = Math.random() * 10;
+            let r = Math.floor(ran);
+            //alert("1から10の乱数＝" + r);
+            alert("0から9の10この乱数＝" + r);
+        }
+    </script>
+</body>
+</html>

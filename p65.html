@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p65</title>
+</head>
+<body>
+    <h1>整数の合計</h1>
+    <p>ボタンをクリックすると、1~100を合計した結果を表示します。</p>
+    <button onClick="add100()">計算結果</button>
+    <button onClick="k_sum()">奇数結果</button>
+    <button onClick="g_sum()">偶数結果</button>
+    <script>
+        function add100() {
+            let anser = 0;
+            for (let i = 1; i <= 100; i++) {
+                anser = anser + i;
+            }
+            alert('1~100を合計すると' + anser + 'になります。');
+        }
+
+        function k_sum() {
+            let anser2 = 0;
+            for (let i = 1; i <= 100; i += 2) {
+                anser2 = anser2 + i;
+            }
+            alert('1~100奇数を合計すると' + anser2 + 'になります。');
+        }
+
+        function g_sum() {
+            let anser3 = 0;
+            for (let i = 2; i <= 100; i += 2) {
+                anser3 = anser3 + i;
+            }
+            alert('1~100偶数を合計すると' + anser3 + 'になります。');
+        }
+    </script>
+</body>
+</html>
