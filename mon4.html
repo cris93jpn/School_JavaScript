@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mon4</title>
+    <style type="text/css">
+        div {
+            width: 550px;
+            border: 2px solid black;
+            overflow: hidden;
+        }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function() {
+            $("#ku1").animate({ marginLeft: '500px'},
+                2000, "swing", function() {
+                    $('div').css( {
+                        backgroundColor: 'blue'
+                    });
+                    alert('移動しました');
+                });
+        });
+    </script>
+</head>
+<body>
+    <div><img id="ku1" src="images/kuma1.gif"></div>
+</body>
+</html>

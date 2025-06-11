@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>mon2</title>
+<script src="js/jquery-3.7.1.min.js"></script>
+<script>
+    $(function(){
+        $("#ku1").hide();
+         $("button").click(function(){
+             $("#ku1").show("slow",function(){
+                 $("img").attr("src","images/kuma2.gif");
+             });
+        });
+    });
+</script>
+</head>
+<body>
+    <button id="show">表示</button><br>
+    <img id="ku1" src="images/kuma1.gif">
+</body>
+</html>

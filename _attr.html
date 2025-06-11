@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>属性</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function() {
+            $('#img1').attr('height', 30); //上の画像の高さ
+            $('#img2').attr({ //下の画像
+                src: 'images/nature01.jpg',
+                alt: '風景',
+                width: '80',
+                height: '30',
+                title: '風景画像',
+            });
+            alert($('#img2').attr('title'));
+        });
+    </script>
+</head>
+<body>
+    <p><img id="img1" src="images/nature02.jpg"></p>
+    <p><img id="img2"></p>
+</body>
+</html>

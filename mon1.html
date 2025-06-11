@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mon1</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function() {
+            $("button").click(function(){
+                $("img:not(:animated)").toggle("slow");
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>表示</button><br>
+    <img src="images/kuma1.gif">
+</body>
+</html>

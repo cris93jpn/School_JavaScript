@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>イベント</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function() {
+            var flag = false; //クリックされたかどうか調べるための旗(flag)最初はfalse
+            $('img').mousedown(function() {
+                flag = true; //クリックされたから falg に true を入れる
+                return false;//本来のドラッグ機能をキャンセルする
+            })
+            $('img').mouseup(function() {
+                flag = false; //ドロップ完了なので falg に false を入れる
+            })
+            $('img').mousemove(function(e) {
+                if (flag) {
+                    $(this).css({
+                        top: e.pageY-10, 
+                        left: e.pageX-10
+                    }
+                    )};
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>画像をドラッグ＆ドロップ</p>
+    <img src="images/kuma1.gif" style="position:absolute;">
+</body>
+</html>
